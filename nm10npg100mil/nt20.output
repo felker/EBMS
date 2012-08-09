@@ -1,0 +1,271 @@
+ignoring invalid parameter: #string
+nranks 30
+nt 20
+nm 10
+nb 10
+lsizeb 1000000000
+gsizeb 2147483647
+npl 5000000
+npg 100000000
+size_sm 10
+nt:20 nm:10 nb:10 lsizeb:1000000000 npl:5000000 scattering_file:
+0.200000 0.300000 0.400000 0.500000 0.600000 0.700000 0.800000 0.900000 1.000000 
+0.111111 0.222222 0.333333 0.444444 0.555556 0.666667 0.777778 0.888889 1.000000 
+0.000000 0.125000 0.250000 0.375000 0.500000 0.625000 0.750000 0.875000 1.000000 
+0.000000 0.000000 0.142857 0.285714 0.428571 0.571429 0.714286 0.857143 1.000000 
+0.000000 0.000000 0.000000 0.166667 0.333333 0.500000 0.666667 0.833333 1.000000 
+0.000000 0.000000 0.000000 0.000000 0.200000 0.400000 0.600000 0.800000 1.000000 
+0.000000 0.000000 0.000000 0.000000 0.000000 0.250000 0.500000 0.750000 1.000000 
+0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.333333 0.666667 1.000000 
+0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.500000 1.000000 
+0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000 
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+scattering_matrix[0][0]:0.100000
+simulation terminated: proc:9  passes:1 time(s):87.599563, 
+memory proc: 24 recived -1 from 9
+memory proc: 20 recived -1 from 9
+memory proc: 25 recived -1 from 9
+memory proc: 22 recived -1 from 9
+memory proc: 23 recived -1 from 9
+memory proc: 21 recived -1 from 9
+memory proc: 26 recived -1 from 9
+memory proc: 28 recived -1 from 9
+memory proc: 29 recived -1 from 9
+memory proc: 27 recived -1 from 9
+simulation terminated: proc:12  passes:1 time(s):90.297811, 
+memory proc: 20 recived -1 from 12
+memory proc: 23 recived -1 from 12
+memory proc: 22 recived -1 from 12
+memory proc: 25 recived -1 from 12
+memory proc: 21 recived -1 from 12
+memory proc: 24 recived -1 from 12
+memory proc: 26 recived -1 from 12
+memory proc: 28 recived -1 from 12
+memory proc: 27 recived -1 from 12
+memory proc: 29 recived -1 from 12
+simulation terminated: proc:10  passes:1 time(s):92.948289, 
+memory proc: 20 recived -1 from 10
+memory proc: 23 recived -1 from 10
+memory proc: 25 recived -1 from 10
+memory proc: 22 recived -1 from 10
+memory proc: 24 recived -1 from 10
+memory proc: 21 recived -1 from 10
+memory proc: 26 recived -1 from 10
+memory proc: 27 recived -1 from 10
+memory proc: 28 recived -1 from 10
+memory proc: 29 recived -1 from 10
+simulation terminated: proc:13  passes:1 time(s):95.651997, 
+memory proc: 20 recived -1 from 13
+memory proc: 23 recived -1 from 13
+memory proc: 22 recived -1 from 13
+memory proc: 25 recived -1 from 13
+memory proc: 21 recived -1 from 13
+memory proc: 24 recived -1 from 13
+memory proc: 26 recived -1 from 13
+memory proc: 27 recived -1 from 13
+memory proc: 28 recived -1 from 13
+memory proc: 29 recived -1 from 13
+simulation terminated: proc:15  passes:1 time(s):98.457571, 
+memory proc: 20 recived -1 from 15
+memory proc: 25 recived -1 from 15
+memory proc: 23 recived -1 from 15
+memory proc: 24 recived -1 from 15
+memory proc: 22 recived -1 from 15
+memory proc: 28 recived -1 from 15
+memory proc: 21 recived -1 from 15
+memory proc: 26 recived -1 from 15
+memory proc: 27 recived -1 from 15
+memory proc: 29 recived -1 from 15
+simulation terminated: proc:8  passes:1 time(s):101.045770, 
+memory proc: 20 recived -1 from 8
+memory proc: 23 recived -1 from 8
+memory proc: 22 recived -1 from 8
+memory proc: 25 recived -1 from 8
+memory proc: 21 recived -1 from 8
+memory proc: 24 recived -1 from 8
+memory proc: 28 recived -1 from 8
+memory proc: 26 recived -1 from 8
+memory proc: 27 recived -1 from 8
+memory proc: 29 recived -1 from 8
+simulation terminated: proc:14  passes:1 time(s):103.641220, 
+memory proc: 20 recived -1 from 14
+memory proc: 23 recived -1 from 14
+memory proc: 29 recived -1 from 14
+memory proc: 22 recived -1 from 14
+memory proc: 25 recived -1 from 14
+memory proc: 21 recived -1 from 14
+memory proc: 24 recived -1 from 14
+memory proc: 28 recived -1 from 14
+memory proc: 26 recived -1 from 14
+memory proc: 27 recived -1 from 14
+simulation terminated: proc:0  passes:1 time(s):106.229235, 
+memory proc: 25 recived -1 from 0
+memory proc: 20 recived -1 from 0
+memory proc: 23 recived -1 from 0
+memory proc: 22 recived -1 from 0
+memory proc: 24 recived -1 from 0
+memory proc: 21 recived -1 from 0
+memory proc: 26 recived -1 from 0
+memory proc: 29 recived -1 from 0
+memory proc: 28 recived -1 from 0
+memory proc: 27 recived -1 from 0
+simulation terminated: proc:11  passes:1 time(s):108.817528, 
+memory proc: 20 recived -1 from 11
+memory proc: 23 recived -1 from 11
+memory proc: 29 recived -1 from 11
+memory proc: 22 recived -1 from 11
+memory proc: 25 recived -1 from 11
+memory proc: 21 recived -1 from 11
+memory proc: 24 recived -1 from 11
+memory proc: 28 recived -1 from 11
+memory proc: 26 recived -1 from 11
+memory proc: 27 recived -1 from 11
+simulation terminated: proc:6  passes:1 time(s):111.405751, 
+memory proc: 25 recived -1 from 6
+memory proc: 20 recived -1 from 6
+memory proc: 23 recived -1 from 6
+memory proc: 22 recived -1 from 6
+memory proc: 21 recived -1 from 6
+memory proc: 24 recived -1 from 6
+memory proc: 26 recived -1 from 6
+memory proc: 29 recived -1 from 6
+memory proc: 28 recived -1 from 6
+memory proc: 27 recived -1 from 6
+simulation terminated: proc:16  passes:1 time(s):114.159392, 
+memory proc: 25 recived -1 from 16
+memory proc: 20 recived -1 from 16
+memory proc: 23 recived -1 from 16
+memory proc: 22 recived -1 from 16
+memory proc: 21 recived -1 from 16
+memory proc: 24 recived -1 from 16
+memory proc: 26 recived -1 from 16
+memory proc: 29 recived -1 from 16
+memory proc: 28 recived -1 from 16
+memory proc: 27 recived -1 from 16
+simulation terminated: proc:7  passes:1 time(s):116.747429, 
+memory proc: 25 recived -1 from 7
+memory proc: 20 recived -1 from 7
+memory proc: 23 recived -1 from 7
+memory proc: 22 recived -1 from 7
+memory proc: 21 recived -1 from 7
+memory proc: 24 recived -1 from 7
+memory proc: 26 recived -1 from 7
+memory proc: 29 recived -1 from 7
+memory proc: 28 recived -1 from 7
+memory proc: 27 recived -1 from 7
+simulation terminated: proc:19  passes:1 time(s):119.358534, 
+memory proc: 25 recived -1 from 19
+memory proc: 20 recived -1 from 19
+memory proc: 23 recived -1 from 19
+memory proc: 22 recived -1 from 19
+memory proc: 24 recived -1 from 19
+memory proc: 21 recived -1 from 19
+memory proc: 26 recived -1 from 19
+memory proc: 27 recived -1 from 19
+memory proc: 29 recived -1 from 19
+memory proc: 28 recived -1 from 19
+simulation terminated: proc:4  passes:1 time(s):122.665973, 
+memory proc: 25 recived -1 from 4
+memory proc: 20 recived -1 from 4
+memory proc: 23 recived -1 from 4
+memory proc: 22 recived -1 from 4
+memory proc: 24 recived -1 from 4
+memory proc: 21 recived -1 from 4
+memory proc: 26 recived -1 from 4
+memory proc: 29 recived -1 from 4
+memory proc: 28 recived -1 from 4
+memory proc: 27 recived -1 from 4
+simulation terminated: proc:3  passes:1 time(s):125.303282, 
+memory proc: 25 recived -1 from 3
+memory proc: 20 recived -1 from 3
+memory proc: 23 recived -1 from 3
+memory proc: 22 recived -1 from 3
+memory proc: 21 recived -1 from 3
+memory proc: 24 recived -1 from 3
+memory proc: 26 recived -1 from 3
+memory proc: 27 recived -1 from 3
+memory proc: 29 recived -1 from 3
+memory proc: 28 recived -1 from 3
+simulation terminated: proc:2  passes:1 time(s):128.587287, 
+memory proc: 25 recived -1 from 2
+memory proc: 20 recived -1 from 2
+memory proc: 23 recived -1 from 2
+memory proc: 22 recived -1 from 2
+memory proc: 24 recived -1 from 2
+memory proc: 21 recived -1 from 2
+memory proc: 26 recived -1 from 2
+memory proc: 29 recived -1 from 2
+memory proc: 28 recived -1 from 2
+memory proc: 27 recived -1 from 2
+simulation terminated: proc:18  passes:1 time(s):131.382558, 
+memory proc: 25 recived -1 from 18
+memory proc: 20 recived -1 from 18
+memory proc: 23 recived -1 from 18
+memory proc: 24 recived -1 from 18
+memory proc: 22 recived -1 from 18
+memory proc: 29 recived -1 from 18
+memory proc: 21 recived -1 from 18
+memory proc: 28 recived -1 from 18
+memory proc: 26 recived -1 from 18
+memory proc: 27 recived -1 from 18
+simulation terminated: proc:17  passes:1 time(s):134.049201, 
+memory proc: 25 recived -1 from 17
+memory proc: 20 recived -1 from 17
+memory proc: 23 recived -1 from 17
+memory proc: 22 recived -1 from 17
+memory proc: 24 recived -1 from 17
+memory proc: 21 recived -1 from 17
+memory proc: 26 recived -1 from 17
+memory proc: 29 recived -1 from 17
+memory proc: 28 recived -1 from 17
+memory proc: 27 recived -1 from 17
+simulation terminated: proc:5  passes:1 time(s):136.637888, 
+memory proc: 25 recived -1 from 5
+memory proc: 20 recived -1 from 5
+memory proc: 23 recived -1 from 5
+memory proc: 24 recived -1 from 5
+memory proc: 22 recived -1 from 5
+memory proc: 26 recived -1 from 5
+memory proc: 21 recived -1 from 5
+memory proc: 29 recived -1 from 5
+memory proc: 28 recived -1 from 5
+memory proc: 27 recived -1 from 5
+simulation terminated: proc:1  passes:1 time(s):139.226225, 
+memory proc: 25 recived -1 from 1
+memory proc: 20 recived -1 from 1
+memory proc: 23 recived -1 from 1
+memory proc: 22 recived -1 from 1
+memory proc: 24 recived -1 from 1
+memory proc: 21 recived -1 from 1
+memory proc: 29 recived -1 from 1
+memory proc 20 shutting down ...
+memory proc 25 shutting down ...
+memory proc 23 shutting down ...
+memory proc 24 shutting down ...
+memory proc 22 shutting down ...
+memory proc: 28 recived -1 from 1
+memory proc 21 shutting down ...
+memory proc: 26 recived -1 from 1
+memory proc: 27 recived -1 from 1
+memory proc 29 shutting down ...
+memory proc 28 shutting down ...
+memory proc 26 shutting down ...
+memory proc 27 shutting down ...

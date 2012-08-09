@@ -1,0 +1,18 @@
+
+
+# Challenger problems
+
+set of problems, npg, gsizeb fixed, nt increases
+nm fixed = 10
+
+-- find number of tracking processors where the time optimized
+
+1000 tracking processors, no redundancy on node
+
+
+data.m
+
+nm=10;
+lsizeb=1000000;
+nt=[16];
+npl=[6250000];

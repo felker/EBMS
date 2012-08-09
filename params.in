@@ -1,0 +1,12 @@
+int nranks 12
+int nt 2              
+int nm 10             
+int nb 10             
+long lsizeb 100000
+long gsizeb 1000000
+long npl   5000000
+long npg   10000000
+int size_sm 10
+int nonblocking 1
+float tracking_rate 2.5
+#string sm_file scattering_matrix.txt
