@@ -1,0 +1,4 @@
+/usr/bin/qsub.py -A Reactor_Modeling -q devel-ratio-16 -n 266 --proccount 266 -t 30 -O nt256block ./EBMS params3.in
+
+submitted with cwd set to: /gpfs/home/felker/EBMS
+

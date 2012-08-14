@@ -1,0 +1,92 @@
+/usr/bin/qsub.py -A Reactor_Modeling -q prod-devel -n 42 --proccount 42 -t 20 -O nt32 ./EBMS params.in
+
+submitted with cwd set to: /gpfs/home/felker/EBMS
+
+
+Command: '/bgsys/drivers/ppcfloor/bin/mpirun' '-host' '172.17.4.1' '-np' '42' '-partition' 'CHR-R00-M1-N04-64' '-mode' 'smp' '-cwd' '/gpfs/home/felker/EBMS' '-exe' '/gpfs/home/felker/EBMS/./EBMS' '-args' 'params.in' '-env' 'COBALT_JOBID=537098'
+
+Environment:
+HISTTIMEFORMAT=%F %T 
+CPU=ppc64
+JAVA_ROOT=/usr/lib/jvm/java
+LESS=-M -I -R
+MINICOM=-c on
+CSHEDIT=emacs
+HOSTTYPE=ppc64
+LESSOPEN=lessopen.sh %s
+QT_SYSTEM_DIR=/usr/share/desktop-data
+SSH_CLIENT=10.40.2.7 55329 22
+CVS_RSH=ssh
+LOGNAME=root
+USER=root
+INPUTRC=/etc/inputrc
+HOME=/root
+PATH=/sbin:/usr/sbin:/usr/local/sbin:/opt/gnome/sbin:/root/bin:/usr/local/bin:/usr/bin:/usr/X11R6/bin:/bin:/usr/games:/opt/gnome/bin:/opt/kde3/bin:/dbhome/db2cat/sqllib/bin:/dbhome/db2cat/sqllib/adm:/dbhome/db2cat/sqllib/misc:/bgsys/drivers/ppcfloor/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/usr/lpp/mmfs/bin
+HISTSIZE=1000
+ARCH=linux-sles10-ppc64
+XKEYSYMDB=/usr/X11R6/lib/X11/XKeysymDB
+MPIRUN_CONFIG_FILE=/etc/mpirun.cfg
+LANG=POSIX
+INFOPATH=/usr/local/info:/usr/share/info:/usr/info:/opt/gnome/share/info
+TERM=screen.linux
+SHELL=/bin/bash
+JDK_HOME=/usr/lib/jvm/java
+SHLVL=2
+XNLSPATH=/usr/X11R6/lib/X11/nls
+DB2INSTANCE=db2cat
+COBALT_JOBID=537098
+G_BROKEN_FILENAMES=1
+PWD=/root
+LD_LIBRARY_PATH=/bgsys/drivers/ppcfloor/lib64:/dbhome/db2cat/sqllib/lib64:/dbhome/db2cat/sqllib/lib32
+LS_COLORS=
+PLATFORM=linux-sles10-ppc64
+GNOME2_PATH=/usr/local:/opt/gnome:/usr
+BRIDGE_CONFIG_FILE=/bgsys/local/etc/bridge.config
+LESS_ADVANCED_PREPROCESSOR=no
+SDK_HOME=/usr/lib/jvm/java
+MANPATH=/usr/share/man:/usr/local/man:/usr/local/share/man:/usr/X11R6/man:/opt/gnome/share/man
+OSTYPE=linux
+GTK_PATH=/usr/local/lib/gtk-2.0:/opt/gnome/lib/gtk-2.0:/usr/lib/gtk-2.0
+JAVA_HOME=/opt/ibm/java2-ppc64-50
+PROFILEREAD=true
+GROFF_NO_SGR=yes
+JAVA_BINDIR=/usr/lib/jvm/java/bin
+INFODIR=/usr/local/info:/usr/share/info:/usr/info
+ACLOCAL_FLAGS=-I /opt/gnome/share/aclocal
+NNTPSERVER=news
+CLASSPATH=/dbhome/db2cat/sqllib/java/db2java.zip:/dbhome/db2cat/sqllib/java/db2jcc.jar:/dbhome/db2cat/sqllib/java/sqlj.zip:/dbhome/db2cat/sqllib/function:/dbhome/db2cat/sqllib/java/db2jcc_license_cu.jar:.
+LC_CTYPE=en_US.UTF-8
+HOST=csn1-mgmt
+MORE=-sl
+ENV=/etc/bash.bashrc
+LESSKEY=/etc/lesskey.bin
+PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/opt/kde3/lib/pkgconfig:/opt/gnome/lib/pkgconfig:/opt/gnome/lib/pkgconfig:/opt/gnome/share/pkgconfig
+XDG_CONFIG_DIRS=/usr/local/etc/xdg/:/etc/xdg/:/etc/opt/gnome/xdg/
+LS_OPTIONS=-A -N --color=none -T 0
+XCURSOR_THEME=Industrial
+_=/usr/bin/nohup
+TEXINPUTS=:/root/.TeX:/usr/share/doc/.TeX:/usr/doc/.TeX
+DB_PROPERTY=/bgsys/local/etc/db.properties
+FROM_HEADER=
+LESSCLOSE=lessclose.sh %s %s
+MPIRUN_VERBOSE=1
+SSH_TTY=/dev/pts/2
+BGL_SN_QUERY_PATH=/bgsys/drivers/ppcfloor/bin
+WINDOWMANAGER=/usr/X11R6/bin/gnome
+SSH_CONNECTION=10.40.2.7 55329 10.40.4.1 22
+MMCS_SERVER_IP=172.17.4.1
+PYTHONSTARTUP=/etc/pythonstart
+WHATAMI=linux-sles10-ppc64
+HOSTNAME=csn1
+COLORTERM=1
+MAIL=/var/mail/root
+MACHTYPE=ppc64-suse-linux
+PAGER=less
+XDG_DATA_DIRS=/usr/local/share/:/usr/share/:/etc/opt/kde3/share/:/opt/kde3/share/:/opt/gnome/share/
+JRE_HOME=/usr/lib/jvm/java/jre
+
+Info: stdin received from /dev/null
+Info: stdout sent to /gpfs/home/felker/EBMS/nt32.output
+Info: stderr sent to /gpfs/home/felker/EBMS/nt32.error
+
+Info: task completed normally with an exit code of 0; initiating job cleanup and removal
