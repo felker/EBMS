@@ -197,8 +197,8 @@ int main(int argc, char **argv){
 	
 	for (i=0;i<npl;++i){
 	  while ( p[i].band == k && !p[i].absorbed){
-	    //	    pause.tv_nsec = (long) tracking_rate*1.e6;    /* tracking rate is in milliseconds */
-	    //	    assert (sleep(pause,rem) == 0);
+	    pause.tv_nsec = (long) tracking_rate*1.e6;    /* tracking rate is in milliseconds */
+	    assert (sleep(pause,rem) == 0);
 	    ran_val = rn();
 	    if (ran_val <= ABSORPTION_THRESHOLD){
 	      p[i].absorbed = TRUE;
