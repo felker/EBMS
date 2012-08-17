@@ -74,6 +74,7 @@ int main(int argc, char **argv){
   }
   
   /* send non-redundant input parameters to all procs */
+  MPI_Bcast(&tracking_rate, 1, MPI_FLOAT, 0, MPI_COMM_WORLD);
   MPI_Bcast(&nt, 1, MPI_INT, 0, MPI_COMM_WORLD);
   MPI_Bcast(&use_nonblocking, 1, MPI_LOGICAL, 0, MPI_COMM_WORLD);
   MPI_Bcast(&nm, 1, MPI_INT, 0, MPI_COMM_WORLD);
@@ -197,8 +198,11 @@ int main(int argc, char **argv){
 	
 	for (i=0;i<npl;++i){
 	  while ( p[i].band == k && !p[i].absorbed){
-	    pause.tv_nsec = (long) tracking_rate*1.e6;    /* tracking rate is in milliseconds */
-	    assert (sleep(pause,rem) == 0);
+	    pause.tv_nsec = (long) tracking_rate*1.e6;    /* tracking rate is in milliseconds */	 
+	    pause.tv_sec = (time_t) 0;
+
+	    assert (nanosleep(&pause,&rem) == 0);
+
 	    ran_val = rn();
 	    if (ran_val <= ABSORPTION_THRESHOLD){
 	      p[i].absorbed = TRUE;
@@ -321,5 +325,11 @@ static void create_scattering_matrix(float **scattering_matrix, int nb){
     }
     printf("\n");
     scattering_matrix[i][nb-1] = 1.0;
+  }
+  for (i = 0; i < nb; ++i){
+    for (j = 0; j < nb; ++j){
+      printf("%f ", scattering_matrix[i][j]);
+    }
+    printf("\n");
   }
 }
