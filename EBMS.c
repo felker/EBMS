@@ -131,7 +131,8 @@ int main(int argc, char **argv){
   else{              /* if tracking proc */
     int i,j,k;
     double ran_val;
-    double ts,tf;
+    double ts,tf, ts_comm, tf_comm, comm_time;
+    comm_time = 0.0;
     long *n_alive = (long *) malloc(nm*sizeof(long));
     MPI_Status stat;
     
@@ -184,22 +185,25 @@ int main(int argc, char **argv){
     total_alive = npl;
 
     ts = MPI_Wtime();
-    printf("scattering_matrix[0][0]:%f\n",scattering_matrix[0][0]);
+    pause.tv_nsec = (long) tracking_rate*1.e6;    /* tracking rate is in milliseconds */	 
+    pause.tv_sec = (time_t) 0;
+
     while (total_alive > 0){
       ++n_passes;
       for (k=0;k<nb;++k){
 	int server_proc = k;
+	ts_comm = MPI_Wtime();
 	MPI_Send(&ping,1,MPI_INTEGER,server_proc, 0,
 		 intercomm);
 	
 	MPI_Recv(xdata,lsize,MPI_FLOAT,
 		 server_proc, MPI_ANY_TAG,
 		 intercomm, &stat);
-	
+	tf_comm = MPI_Wtime();
+	comm_time += (tf_comm - ts_comm);
+
 	for (i=0;i<npl;++i){
 	  while ( p[i].band == k && !p[i].absorbed){
-	    pause.tv_nsec = (long) tracking_rate*1.e6;    /* tracking rate is in milliseconds */	 
-	    pause.tv_sec = (time_t) 0;
 
 	    assert (nanosleep(&pause,&rem) == 0);
 
@@ -228,8 +232,8 @@ int main(int argc, char **argv){
       }      	       	       
     }
     tf=MPI_Wtime();
-    printf("simulation terminated: proc:%d  passes:%d time(s):%f, \n", 
-	   mype, n_passes,tf-ts);
+    printf("simulation terminated: proc:%d  passes:%d time(s):%f comm_time(s):%f, \n", 
+	   mype, n_passes,tf-ts,comm_time);
     
     for (i=0;i<nm;++i){
       ping=-1; /*shutdown signal */
