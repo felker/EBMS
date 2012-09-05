@@ -1,4 +1,5 @@
-#define ABSORPTION_THRESHOLD .1
+#define ABSORPTION_THRESHOLD .03
+#define INT_PER_NEUTRON  (int) (1/ABSORPTION_THRESHOLD)
 #define TERMINATION_VALUE -1
 #define rn() (rand())/((double) RAND_MAX)
 

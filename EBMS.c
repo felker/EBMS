@@ -185,9 +185,9 @@ int main(int argc, char **argv){
     total_alive = npl;
 
     ts = MPI_Wtime();
-    pause.tv_nsec = (long) tracking_rate*1.e6;    /* tracking rate is in milliseconds */	 
+    pause.tv_nsec = (long) (tracking_rate*1.e6/INT_PER_NEUTRON);    /* tracking rate is in milliseconds */	 
     pause.tv_sec = (time_t) 0;
-
+    int interaction_num = 0;
     while (total_alive > 0){
       ++n_passes;
       for (k=0;k<nb;++k){
@@ -204,12 +204,12 @@ int main(int argc, char **argv){
 
 	for (i=0;i<npl;++i){
 	  while ( p[i].band == k && !p[i].absorbed){
-
 	    ran_val = rn();
+	    interaction_num++;	    
+	    assert (nanosleep(&pause,&rem) == 0);
 	    if (ran_val <= ABSORPTION_THRESHOLD){
 	      p[i].absorbed = TRUE;
 	      --n_alive[k];
-	      assert (nanosleep(&pause,&rem) == 0);
 	    }
 	    else{
 	      ran_val = rn();
@@ -228,8 +228,9 @@ int main(int argc, char **argv){
 	
 	total_alive = tot(n_alive,nm);
 	
-      }      	       	       
+      }
     }
+
     tf=MPI_Wtime();
     printf("simulation terminated: proc:%d  passes:%d time(s):%f comm_time(s):%f, \n", 
 	   mype, n_passes,tf-ts,comm_time);
@@ -238,8 +239,19 @@ int main(int argc, char **argv){
       ping=-1; /*shutdown signal */
       MPI_Send(&ping,1,MPI_INT,i,99,intercomm);
     }
+    FILE* file;
+    double max_comm_time,min_tracking_time,max_tracking_time, min_comm_time;
+    double total_time = tf -ts;
+    MPI_Reduce(&comm_time,&max_comm_time,1,MPI_DOUBLE,MPI_MAX,MASTER_PE,intracomm);
+    MPI_Reduce(&comm_time,&min_comm_time,1,MPI_DOUBLE,MPI_MIN,MASTER_PE,intracomm);
+    MPI_Reduce(&total_time,&min_tracking_time,1,MPI_DOUBLE,MPI_MAX,MASTER_PE,intracomm);
+    MPI_Reduce(&total_time,&max_tracking_time,1,MPI_DOUBLE,MPI_MIN,MASTER_PE,intracomm);
+    if (mype == MASTER_PE){
+      file = fopen("summary.out","a");
+      fprintf(file,"%d \t%d \t%ld \t%ld \t%lf \t%lf \t%lf \t%lf \t%lf \t%d \n",nt,nm,npl,lsizeb,max_comm_time,min_comm_time,min_tracking_time/npl,max_tracking_time/npl,ABSORPTION_THRESHOLD,INT_PER_NEUTRON);
+      fclose(file);
+    }
   }
-  
   MPI_Finalize();
   
 }
