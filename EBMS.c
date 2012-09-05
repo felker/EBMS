@@ -205,12 +205,11 @@ int main(int argc, char **argv){
 	for (i=0;i<npl;++i){
 	  while ( p[i].band == k && !p[i].absorbed){
 
-	    assert (nanosleep(&pause,&rem) == 0);
-
 	    ran_val = rn();
 	    if (ran_val <= ABSORPTION_THRESHOLD){
 	      p[i].absorbed = TRUE;
 	      --n_alive[k];
+	      assert (nanosleep(&pause,&rem) == 0);
 	    }
 	    else{
 	      ran_val = rn();
