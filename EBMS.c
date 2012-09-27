@@ -188,6 +188,11 @@ int main(int argc, char **argv){
     pause.tv_nsec = (long) (tracking_rate*1.e6);    /* tracking rate is in milliseconds */	 
     pause.tv_sec = (time_t) 0;
     int interaction_num = 0;
+
+    /*temp check variables */
+    double start_time,end_time;
+    int particle_deaths=0;
+
     while (total_alive > 0){
       ++n_passes;
       for (k=0;k<nb;++k){
@@ -201,7 +206,10 @@ int main(int argc, char **argv){
 		 intercomm, &stat);
 	tf_comm = MPI_Wtime();
 	comm_time += (tf_comm - ts_comm);
+	/* Temporary check for hypothesis, only band 0 data */
+	if (k==1) printf("deaths %d effective absorption rate: %lf time to request: %lf\n",particle_deaths,((double) particle_deaths)/((double) npl),end_time-start_time);
 
+	if (k==0) start_time = MPI_Wtime();
 	for (i=0;i<npl;++i){
 	    while ( p[i].band == k && !p[i].absorbed){
 		ran_val = rn();
@@ -209,6 +217,8 @@ int main(int argc, char **argv){
 		if (ran_val <= ABSORPTION_THRESHOLD){
 		    assert (nanosleep(&pause,&rem) == 0); 
 		    p[i].absorbed = TRUE;
+		    // temporary check
+		    if (k ==0) particle_deaths++;
 		    --n_alive[k];
 		}
 		else{
@@ -227,7 +237,7 @@ int main(int argc, char **argv){
 	}
 	
 	total_alive = tot(n_alive,nm);
-	
+	if(k==0) end_time = MPI_Wtime();
       }
     }
 
